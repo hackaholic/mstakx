@@ -96,7 +96,7 @@ def update_book(book_id):
         if data:
             status = db.delete(book_id)
             if status == "success":
-                message = "The book {} was deleted succssfully".format(data.get("name"))
+                message = "The book {} was deleted successfully".format(data.get("name"))
                 db.db_close()
                 return flask.jsonify(output_data(200, "success", message))
             else:
